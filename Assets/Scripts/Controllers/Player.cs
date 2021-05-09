@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         this.dead = false;
-        this._startPos = new Vector3(2, 0, 0);
+        this._startPos = Vector3.zero;
     }
 
     #region CUSTOM_FUNCTIONS
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (this.dead == false)
         {
-            transform.Translate(-1.5f * Time.deltaTime, 0, 0); // Test collisions are working when player obj is moving.
+            transform.Translate(1.5f * Time.deltaTime, 0, 0); // Test collisions are working when player obj is moving.
         }                       
     }
 }

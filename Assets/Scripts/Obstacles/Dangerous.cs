@@ -15,7 +15,7 @@ public class Dangerous : Obstacles
         {
             this._type = Type.DEBRIS;
         }
-        else if (this.name == "Blazing_Meteor")
+        else if (this.name == "BlazingMeteor")
         {
             this._type = Type.BLAZING_METEOR;
         }

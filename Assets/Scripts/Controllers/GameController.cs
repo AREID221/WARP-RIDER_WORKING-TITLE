@@ -29,8 +29,11 @@ public class GameController : MonoBehaviour
 
         if (_credits <= 0)
         {
-            _player.transform.position = new Vector3(2, 0, 0);
+            _player.transform.position = Vector3.zero;
             _player.dead = true;
+            // Game over:            
+            // If no highscore, pop up Y/N buttons for restarting or exiting. Reset lives to three and restart game if Y, pop up main screen if N.
+            // If highscore, pop up TextEntry field allowing player to enter name and capture score. Pop up main screen afterwards.
         }
     }
 }
