@@ -27,6 +27,8 @@ public class Safe : Obstacles
             case ObstacleType.VALUABLEMETORITE:
                 //points boost extra points based on multiplier.
                 //
+                Debug.Log("50 points");
+                Destroy(gameObject);
                 //add points in highscore.
                 break;
             default:
@@ -35,7 +37,11 @@ public class Safe : Obstacles
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //call interaction
-        Interaction();
+        if(collision.gameObject.tag == "Player")
+        {
+            //call interaction
+            Interaction();
+        }
+        
     }
 }
